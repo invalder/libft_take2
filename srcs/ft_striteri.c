@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 17:25:17 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/02/23 23:50:06 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:12:37 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	char	*ps;
 	int		len;
 
+	if (!s)
+		return ;
 	ps = s;
 	len = 0;
 	if (!*ps)

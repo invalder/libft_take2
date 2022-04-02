@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 12:11:17 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/02/22 16:10:06 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/02 14:35:38 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*ptr_d;
 	unsigned char	*ptr_s;
 
+	if (dest == NULL && src == NULL)
+		return (dest);
 	if (dest < src)
 	{
 		ptr_d = (unsigned char *)dest;

@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 02:46:45 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/02/23 23:50:41 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:03:04 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	size_t	len;
 
+	if (!s1 || !set)
+		return (NULL);
 	p_s_fwd = (char *) s1 + head_check(s1, set);
 	p_s_bwd = (char *) s1 + tail_check(s1, set);
 	len = p_s_bwd - p_s_fwd + 1;

@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 11:23:18 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/02/23 23:49:04 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/02 15:21:37 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	ptr_d = dest;
 	ptr_s = src;
-	if (dest == NULL || src == NULL)
-	{
-		if (dest == NULL)
-			return (NULL);
-		return (dest);
-	}
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	if (n)
 		while (n-- > 0)
 			*ptr_d++ = *ptr_s++;

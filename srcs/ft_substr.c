@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 20:27:58 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/02/23 23:50:48 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/02 14:59:52 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	s_len;
 	size_t	m_len;
 
+	if (!s)
+		return (NULL);
 	s_len = (unsigned int)ft_strlen(s);
 	if ((start + len) > s_len && (start + 1) <= s_len)
 		m_len = s_len - start;
