@@ -6,7 +6,7 @@
 #    By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 22:45:00 by nnakarac          #+#    #+#              #
-#    Updated: 2022/04/03 19:47:30 by nnakarac         ###   ########.fr        #
+#    Updated: 2022/04/03 20:07:50 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,7 @@ PRINTF = ft_printf.c \
 		ft_printf_utils_print_s.c \
 		ft_printf_utils_print_u.c \
 		ft_printf_utils_print_x.c \
-
+		ft_printf_utils_str.c
 
 ADDC = $(STR_ADDC) $(PUT_ADDC) $(GNL) $(PRINTF)
 SRCS = $(LIBC) $(ADDC)
