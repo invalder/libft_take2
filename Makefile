@@ -6,7 +6,7 @@
 #    By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 22:45:00 by nnakarac          #+#    #+#              #
-#    Updated: 2022/04/02 15:36:55 by nnakarac         ###   ########.fr        #
+#    Updated: 2022/04/02 19:08:00 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ STR_ADDC = ft_substr.c \
 		ft_striteri.c
 PUT_ADDC = ft_putchar_fd.c \
 		ft_putstr_fd.c \
+		ft_putnstr.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 LST_ADDC = ft_lstsize.c \
