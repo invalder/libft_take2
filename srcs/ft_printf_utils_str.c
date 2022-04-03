@@ -6,17 +6,12 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 17:53:35 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/04/03 19:45:41 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/04 01:16:07 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
-
-void	ft_putnstr(char *str, size_t len)
-{
-	write(1, str, len);
-}
 
 char	*ft_mystrjoin(char *s1, char *s2, int free_s1, int free_s2)
 {

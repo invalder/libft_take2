@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 18:32:45 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/04/03 19:47:16 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/04 01:16:31 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,6 @@ char	*ft_append2str(char *buff, char c);
 char	*ft_appendchr(char *buff, char *ptr, int *len);
 char	*ft_append2str_ul(char *buff, char c, int shift);
 
-void	ft_putnstr(char *str, size_t len);
 char	*ft_mysubstr(char *s, unsigned int start, size_t len);
 char	*ft_mystrjoin(char *s1, char *s2, int free_s1, int free_s2);
 
