@@ -6,7 +6,7 @@
 #    By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/16 22:45:00 by nnakarac          #+#    #+#              #
-#    Updated: 2022/04/02 19:08:00 by nnakarac         ###   ########.fr        #
+#    Updated: 2022/04/03 19:47:30 by nnakarac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,8 +68,24 @@ LST_ADDC = ft_lstsize.c \
 		ft_lstaddback.c
 GNL = ft_get_next_line.c \
 		ft_get_next_line_utils.c
+PRINTF = ft_printf.c \
+		ft_printf_utils_format1.c \
+		ft_printf_utils_format2.c \
+		ft_printf_utils_format3.c \
+		ft_printf_utils_format4.c \
+		ft_printf_utils_memory.c \
+		ft_printf_utils_nbr1.c \
+		ft_printf_utils_nbr2.c \
+		ft_printf_utils_print.c \
+		ft_printf_utils_print_c.c \
+		ft_printf_utils_print_d.c \
+		ft_printf_utils_print_p.c \
+		ft_printf_utils_print_s.c \
+		ft_printf_utils_print_u.c \
+		ft_printf_utils_print_x.c \
 
-ADDC = $(STR_ADDC) $(PUT_ADDC) $(GNL)
+
+ADDC = $(STR_ADDC) $(PUT_ADDC) $(GNL) $(PRINTF)
 SRCS = $(LIBC) $(ADDC)
 OBJS = $(SRCS:.c=.o)
 INCS = -Iincludes/

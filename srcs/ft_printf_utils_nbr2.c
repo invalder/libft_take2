@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_printf_utils_nbr2.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 10:04:09 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/04/03 17:52:11 by nnakarac         ###   ########.fr       */
+/*   Created: 2022/04/03 17:48:53 by nnakarac          #+#    #+#             */
+/*   Updated: 2022/04/03 19:47:07 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *s);
-
-size_t	ft_strlen(const char *s)
+size_t	ft_nbrusize_base(size_t n, size_t len, size_t b)
 {
-	size_t		ret;
-	const char	*ptr;
+	size_t	num;
 
-	ret = 0;
-	ptr = s;
-	if (s)
+	num = n;
+	if (num < b)
+		len++;
+	else
 	{
-		while (*ptr++)
-			ret++;
+		len = ft_nbrusize_base((num - (num % b)) / b, len, b);
+		len = ft_nbrusize_base((num % b), len, b);
 	}
-	return (ret);
+	return (len);
 }

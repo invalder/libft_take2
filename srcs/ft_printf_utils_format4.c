@@ -6,7 +6,7 @@
 /*   By: nnakarac <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 01:43:16 by nnakarac          #+#    #+#             */
-/*   Updated: 2022/04/03 11:48:24 by nnakarac         ###   ########.fr       */
+/*   Updated: 2022/04/03 18:55:13 by nnakarac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	ft_is_width(char *ptr, t_prefix *t_pf, va_list ap)
 		}
 		return (1);
 	}
-	else if (*ptr >= '0' && *ptr <= '9')
+	else if (*ptr >= '1' && *ptr <= '9')
 	{
-		return (ft_myatoi(ptr, t_pf, 0));
+		return (ft_myatoi_format(ptr, t_pf, 0));
 	}
 	return (0);
 }
@@ -57,7 +57,7 @@ int	ft_is_precision(char *ptr, t_prefix *t_pf, va_list ap)
 		}
 		else if (*ptr >= '0' && *ptr <= '9')
 		{
-			return (ft_myatoi(ptr, t_pf, 1) + 1);
+			return (ft_myatoi_format(ptr, t_pf, 1) + 1);
 		}
 		else if (ft_specchk(ptr))
 		{
@@ -66,4 +66,23 @@ int	ft_is_precision(char *ptr, t_prefix *t_pf, va_list ap)
 		}
 	}
 	return (0);
+}
+
+size_t	ft_myatoi_format(char *ptr, t_prefix *t_pf, int is_prec)
+{
+	size_t	len;
+	int		num;
+
+	len = 0;
+	num = 0;
+	while (*(ptr + len) != '.' && !ft_specchk(ptr + len))
+	{
+		num = (num * 10) + (*(ptr + len) - '0');
+		len++;
+	}
+	if (is_prec)
+		t_pf->precision = num;
+	else
+		t_pf->width = num;
+	return (len);
 }
